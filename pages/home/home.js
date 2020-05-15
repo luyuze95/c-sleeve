@@ -1,24 +1,23 @@
 // pages/home/home.js
+import {Theme} from "../../model/theme";
+
 Page({
 
     /**
      * 页面的初始数据
      */
-    data: {},
+    data: {
+        topTheme: null
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        wx.request({
-            url: "http://se.7yue.pro/v1/theme/by/names",
-            method: "GET",
-            data: {
-                names: "t-1"
-            },
-            header: {
-              appkey:""
-            }
+        Theme.getHomeLocationA(data => {
+            this.setData({
+                topTheme: data[0]
+            })
         })
     },
 
@@ -70,4 +69,4 @@ Page({
     onShareAppMessage: function () {
 
     }
-})
+});
