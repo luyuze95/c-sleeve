@@ -3,14 +3,11 @@
 import {Http} from "../utils/http";
 
 class Theme {
-    static getHomeLocationA(callback) {
-        Http.request({
+    static async getHomeLocationA() {
+        return await Http.request({
             url: `53000/themes`,
             data: {
                 name: "t-1"
-            },
-            callback: data => {
-                callback(data);
             }
         });
     }
