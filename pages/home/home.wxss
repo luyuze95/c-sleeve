@@ -1,9 +1,21 @@
+/*.container {*/
+/*    background-color: #000000;*/
+/*}*/
+
 .top-theme {
     width: 100%;
     height: 260rpx;
+    display: flex;
 }
 
 .swiper {
     width: 100%;
     height: 360rpx;
+}
+
+.activity {
+    margin-top: 20rpx;
+    width: 100%;
+    height: 310rpx;
+    display: flex;
 }
