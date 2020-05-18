@@ -32,8 +32,10 @@ Page({
         const theme = new Theme();
         await theme.getThemes();
         // 永远保证调用的简单，可以接受复杂的定义
-        const themeA = await theme.getHomeLocationA();
-        const themeE = await theme.getHomeLocationE();
+        const themeA = theme.getHomeLocationA();
+        const themeE = theme.getHomeLocationE();
+        const themeF = theme.getHomeLocationF();
+        const themeH = theme.getHomeLocationH();
         let themeESpu = [];
         if (themeE.online) {
             const data = await Theme.getHomeLocationESpu();
@@ -42,13 +44,17 @@ Page({
             }
         }
         const bannerB = await Banner.getHomeLocationB();
+        const bannerG = await Banner.getHomeLocationG();
         const grid = await Category.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD();
         this.setData({
             themeA,
             themeE,
+            themeF,
+            themeH,
             themeESpu,
             bannerB,
+            bannerG,
             grid,
             activityD
         })

@@ -1,5 +1,6 @@
 .container {
     padding: 42rpx 0 34rpx 28rpx;
+    background-color: #ffffff;
 }
 
 .title {

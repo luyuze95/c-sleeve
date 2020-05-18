@@ -15,4 +15,15 @@
     <s-spu-scroll theme="{{themeE}}" spu-list="{{themeESpu}}" wx:if="{{themeE.online}}">
     </s-spu-scroll>
 
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
+
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <image src="{{themeH.entrance_img}}" class="fashion"></image>
+
+    <view class="spu-bottom">
+        <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+    </view>
+
+
 </view>
