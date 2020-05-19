@@ -3,6 +3,7 @@ import {Theme} from "../../model/theme";
 import {Banner} from "../../model/banner";
 import {Category} from "../../model/category";
 import {Activity} from "../../model/activity";
+import {SpuPaging} from "../../model/spu-paging";
 
 Page({
 
@@ -23,6 +24,16 @@ Page({
      */
     async onLoad(options) {
         this.initAllData();
+        this.initBottomSpuList();
+    },
+
+    async initBottomSpuList() {
+        const paging = SpuPaging.getLatestPaging();
+        const data = await paging.getMoreData();
+        if (!data) {
+            return;
+        }
+        wx.lin.renderWaterFlow(data.items);
     },
 
     /**
