@@ -4,6 +4,7 @@ import {Banner} from "../../model/banner";
 import {Category} from "../../model/category";
 import {Activity} from "../../model/activity";
 import {SpuPaging} from "../../model/spu-paging";
+import {Http} from "../../utils/http";
 
 Page({
 
@@ -16,7 +17,9 @@ Page({
         themeESpu: [],
         bannerB: null,
         grid: [],
-        activityD: null
+        activityD: null,
+        spuPaging: null,
+        loadingType: 'loading'
     },
 
     /**
@@ -29,10 +32,14 @@ Page({
 
     async initBottomSpuList() {
         const paging = SpuPaging.getLatestPaging();
+        this.data.spuPaging = paging;
         const data = await paging.getMoreData();
         if (!data) {
             return;
         }
+        // const data = await Http.request({
+        //     url: `53005/spuList/1`
+        // });
         wx.lin.renderWaterFlow(data.items);
     },
 
@@ -109,8 +116,17 @@ Page({
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
-
+    onReachBottom: async function () {
+        const data = await this.data.spuPaging.getMoreData();
+        if (!data) {
+            return;
+        }
+        wx.lin.renderWaterFlow(data.items);
+        if (!data.moreData) {
+            this.setData({
+                loadingType: 'end'
+            });
+        }
     },
 
     /**
