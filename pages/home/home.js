@@ -1,9 +1,7 @@
-// pages/home/home.js
-import {Theme} from "../../model/theme";
-import {Banner} from "../../model/banner";
-import {Category} from "../../model/category";
-import {Activity} from "../../model/activity";
-import {SpuPaging} from "../../model/spu-paging";
+import {Theme} from "../../models/theme";
+import {Banner} from "../../models/banner";
+import {Category} from "../../models/category";
+import {Activity} from "../../models/activity";
 import {Http} from "../../utils/http";
 
 Page({
@@ -31,15 +29,15 @@ Page({
     },
 
     async initBottomSpuList() {
-        const paging = SpuPaging.getLatestPaging();
-        this.data.spuPaging = paging;
-        const data = await paging.getMoreData();
-        if (!data) {
-            return;
-        }
-        // const data = await Http.request({
-        //     url: `53005/spuList/1`
-        // });
+        // const paging = SpuPaging.getLatestPaging();
+        // this.data.spuPaging = paging;
+        // const data = await paging.getMoreData();
+        // if (!data) {
+        //     return;
+        // }
+        const data = await Http.request({
+            url: `53005/spuList/1`
+        });
         wx.lin.renderWaterFlow(data.items);
     },
 
