@@ -1,3 +1,3 @@
-<s-realm>
+<s-realm spu="{{spu}}">
 
 </s-realm>

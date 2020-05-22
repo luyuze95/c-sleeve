@@ -115,16 +115,16 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: async function () {
-        const data = await this.data.spuPaging.getMoreData();
-        if (!data) {
-            return;
-        }
-        wx.lin.renderWaterFlow(data.items);
-        if (!data.moreData) {
-            this.setData({
-                loadingType: 'end'
-            });
-        }
+        // const data = await this.data.spuPaging.getMoreData();
+        // if (!data) {
+        //     return;
+        // }
+        // wx.lin.renderWaterFlow(data.items);
+        // if (!data.moreData) {
+        //     this.setData({
+        //         loadingType: 'end'
+        //     });
+        // }
     },
 
     /**

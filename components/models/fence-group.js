@@ -1,9 +1,11 @@
 import {Matrix} from "./matrix";
+import {Fence} from "./fence";
 
 class FenceGroup {
 
     spu;
     skuList = [];
+    fences = [];
 
     constructor(spu) {
         this.spu = spu;
@@ -12,9 +14,15 @@ class FenceGroup {
 
     initFences() {
         const matrix = this._createMatrix(this.skuList);
-        matrix.forEach((element, i, j) => {
-
-        })
+        const fences = [];
+        const AT = matrix.transpose();
+        AT.forEach(r => {
+            const fence = new Fence(r);
+            fence.init();
+            fences.push(fence);
+        });
+        this.fences = fences;
+        console.log(fences);
     }
 
     _createMatrix(skuList) {
