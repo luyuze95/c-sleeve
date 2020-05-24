@@ -12,7 +12,7 @@
         <view class="price-row">
             <l-price color="#157658" value-size="28" unit-size="20"
                      autofix value="{{p.mainPrice(data.price, data.discount_price)}}"></l-price>
-            <l-price color="#999999" size="26" wx:if="{{data.discount_price? true : false}}"
+            <l-price color="#999999" size="26" wx:if="{{data.discount_price}}"
                      deleted value="{{p.slashedPrice(data.price, data.discount_price)}}"
             l-class="discount-price"></l-price>
         </view>

@@ -1,4 +1,56 @@
 
 .container {
+    box-sizing: border-box;
     padding: 30rpx;
+    background-color: #ffffff;
+}
+
+.sku-preview {
+    display: flex;
+    flex-direction: row;
+}
+
+.sku-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.sku-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 40rpx;
+}
+
+.discount-price {
+    margin-left: 20rpx;
+}
+
+.price-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.sku-pending {
+    font-size: 20rpx;
+}
+
+.hr {
+    margin-top: 30rpx;
+    width: 690rpx;
+    height: 2rpx;
+    background-color: #E9E9E9;
+}
+
+.stock {
+    margin-left: 30rpx;
+    font-size: 20rpx;
+    color: #999;
+}
+
+.stock-pinch {
+    margin-left: 30rpx;
+    font-size: 20rpx;
+    color: #D20109;
 }
