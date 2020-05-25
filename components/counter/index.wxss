@@ -1,0 +1,19 @@
+/* components/counter/index.wxss */
+
+.all-background {
+    background-color: transparent !important;
+}
+
+.container {
+    border: 3rpx solid #157658 !important;
+    height: 48rpx !important;
+}
+
+.input-size {
+    min-height: 48rpx !important;
+    line-height: 48rpx !important;
+}
+
+.font-color {
+    color: #157658 !important;
+}

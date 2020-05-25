@@ -1,3 +1,5 @@
-<s-realm spu="{{spu}}">
+<!--<s-realm spu="{{spu}}">-->
 
-</s-realm>
+<!--</s-realm>-->
+
+<s-tabbar></s-tabbar>

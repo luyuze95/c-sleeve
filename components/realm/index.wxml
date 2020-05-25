@@ -29,8 +29,8 @@
                 <view wx:if="{{!noSpec}}" class="sku-pending">
                     <text wx:if="{{!skuIntact}}">请选择: </text>
                     <text wx:if="{{skuIntact}}">已选: </text>
-                    <text wx:if="{{!skuIntact}}">xxxx</text>
-                    <text wx:if="{{skuIntact}}">yyyyy</text>
+                    <text wx:if="{{!skuIntact}}">{{missingKeys}}</text>
+                    <text wx:if="{{skuIntact}}">{{currentValues}}</text>
                 </view>
             </view>
         </view>
@@ -43,6 +43,15 @@
     </block>
 
     <view class="counter-container">
+        <text>购买数量</text>
+        <s-counter bind:lintap="onSelectCount"></s-counter>
     </view>
 
+</view>
+
+<view wx:if="{{!outStock}}" class="bottom-btn">
+    <text>加入购物车</text>
+</view>
+<view wx:else class="bottom-btn out-stock">
+    <text>暂时缺货</text>
 </view>
