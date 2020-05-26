@@ -27,6 +27,13 @@
     color: #ffffff;
 }
 
+.img {
+    display: flex;
+    width: 44rpx;
+    height: 44rpx;
+    margin-right: 10rpx;
+}
+
 .s-inner {
     background-color: #157658;
 }

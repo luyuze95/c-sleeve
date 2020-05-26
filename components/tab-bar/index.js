@@ -20,19 +20,19 @@ Component({
   methods: {
     onGoToHome(event){
       this.triggerEvent('gotohome',{
-      })
+      });
     },
 
     onGoToCart(event){
-      this.triggerEvent('gotocart')
+      this.triggerEvent('gotocart');
     },
 
     onAddToCart(event){
-      this.triggerEvent('addtocart')
+      this.triggerEvent('addtocart');
     },
 
     onBuy(event){
-      this.triggerEvent('buy')
+      this.triggerEvent('buy');
     }
   }
-})
+});

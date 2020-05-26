@@ -9,7 +9,8 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        spu: Object
+        spu: Object,
+        orderWay: String
     },
 
     /**
