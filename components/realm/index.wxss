@@ -76,7 +76,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 200rpx;
+    padding-bottom: 100rpx;
 }
 
 .counter-container text {

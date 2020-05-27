@@ -2,7 +2,7 @@
     <swiper class="top"
             autoplay
             indicator-dots>
-        <block wx:for="{{spu.spu_img_list}}" wx:key="{{index}}">
+        <block wx:for="{{spu.spu_img_list}}" wx:key="index">
             <swiper-item>
                 <image class="top" mode="aspectFill" src="{{item.img}}"></image>
             </swiper-item>

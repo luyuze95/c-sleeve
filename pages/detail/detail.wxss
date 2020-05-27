@@ -5,9 +5,9 @@
     height: 680rpx;
 }
 
-.tabbar{
-    position:fixed;
-    bottom:0;
+.tabbar {
+    position: fixed;
+    bottom: 0;
 }
 
 .sku-pending{
