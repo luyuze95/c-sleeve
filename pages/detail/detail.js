@@ -1,5 +1,6 @@
 import {Spu} from "../../models/spu";
 import {ShoppingWay} from "../../core/enum";
+import {SaleExplain} from "../../models/sale-explain";
 
 Page({
 
@@ -10,9 +11,11 @@ Page({
   onLoad: async function (options) {
     const pid = options.pid;
     const spu = await Spu.getDetail(pid);
-
+    // const explain = await SaleExplain.getFixed();
+    const explain = ['这是一段说明文字','这是一段说明文字','这是一段说明文字','这是一段说明文字','这是一段说明文字'];
     this.setData({
-      spu
+      spu,
+      explain
     })
 
   },

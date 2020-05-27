@@ -5,7 +5,7 @@
     background-color: #ffffff;
     max-height: 1000rpx;
     min-height: 700rpx;
-    margin-bottom: 100rpx;
+    /*margin-bottom: 100rpx;*/
 }
 
 .inner-container {
