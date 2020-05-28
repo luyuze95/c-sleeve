@@ -5,9 +5,9 @@
     height: 680rpx;
 }
 
-.tabbar {
-    position: fixed;
-    bottom: 0;
+.tabbar{
+    position:fixed;
+    bottom:0;
 }
 
 .sku-pending{
@@ -35,25 +35,25 @@
     color: #157658;
 }
 
-.explain {
-    margin-top: 10rpx;
+.explain{
+    margin-top:10rpx;
     background-color: #ffffff;
     padding-bottom: 20rpx;
-    padding-top: 20rpx;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    padding-top:20rpx;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
 }
 
-.detail-img-container {
-    margin-bottom: 200rpx;
+.detail-img-container{
+    /*margin-bottom: 200rpx;*/
 }
 
-.detail-img {
+.detail-img{
     display: flex;
     width: 100%;
-    /*height: 1400rpx; */
+    /*height: 1400rpx;*/
 }
 
 

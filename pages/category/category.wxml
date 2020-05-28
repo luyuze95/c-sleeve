@@ -25,7 +25,7 @@
                 l-inactive-class="segment-item"
                 l-line-class="l-seg-line"
                 placement="left">
-            <block wx:for="{{roots}}" wx:key="{{index}}">
+            <block wx:for="{{roots}}" wx:key="index">
                 <l-segment-item key="{{item.id}}" tab="{{item.name}}"></l-segment-item>
             </block>
         </l-segment>

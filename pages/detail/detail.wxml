@@ -1,8 +1,8 @@
-<view>
+<scroll-view style="height:{{h}}rpx;" scroll-y>
     <swiper class="top"
             autoplay
             indicator-dots>
-        <block wx:for="{{spu.spu_img_list}}" wx:key="index">
+        <block wx:for="{{spu.spu_img_list}}" wx:key="{{index}}">
             <swiper-item>
                 <image class="top" mode="aspectFill" src="{{item.img}}"></image>
             </swiper-item>
@@ -28,13 +28,12 @@
     </view>
 
     <view class="detail-img-container">
-        <block wx:for="{{spu.spu_detail_img_list}}" wx:key="index">
+        <block wx:for="{{spu.spu_detail_img_list}}" wx:key="{{index}}">
             <image mode="widthFix" class="detail-img" src="{{item.img}}"></image>
         </block>
     </view>
 
-</view>
-
+</scroll-view>
 
 <l-popup content-align="bottom" show="{{showRealm}}">
     <s-realm bind:specchange="onSpecChange" order-way="{{orderWay}}" spu="{{spu}}"></s-realm>
