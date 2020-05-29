@@ -4,14 +4,14 @@ import {Tag} from "../../models/tag";
 import {Search} from "../../models/search";
 import {showToast} from "../../utils/ui";
 
-const history = new HistoryKeyword()
+const history = new HistoryKeyword();
 Page({
 
     data: {},
 
     onLoad: async function (options) {
-        const historyTags = history.get()
-        const hotTags = await Tag.getSearchTags()
+        const historyTags = history.get();
+        const hotTags = await Tag.getSearchTags();
         this.setData({
             historyTags,
             hotTags
@@ -22,27 +22,27 @@ Page({
         this.setData({
             search: true,
             items: []
-        })
-        const keyword = event.detail.value || event.detail.name
+        });
+        const keyword = event.detail.value || event.detail.name;
         if (!keyword) {
-            showToast('请输入关键字')
+            showToast('请输入关键字');
             return
         }
         // const keyword = event.detail.name
-        history.save(keyword)
+        history.save(keyword);
 
         this.setData({
             historyTags: history.get()
-        })
+        });
 
-        const paging = Search.search(keyword)
+        const paging = Search.search(keyword);
         wx.lin.showLoading({
             color:'#157658',
             type:'flash',
             fullScreen:true
-        })
-        const data = await paging.getMoreData()
-        wx.lin.hideLoading()
+        });
+        const data = await paging.getMoreData();
+        wx.lin.hideLoading();
         this.bindItems(data)
     },
 
@@ -61,10 +61,10 @@ Page({
     },
 
     onDeleteHistory(event) {
-        history.clear()
+        history.clear();
         this.setData({
             historyTags: []
         })
     }
 
-})
+});
